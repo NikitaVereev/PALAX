@@ -1,7 +1,11 @@
 import { FC } from 'react'
 
-const Button: FC = () => {
-	return <div>Button</div>
+type IChildren = {
+	children?: React.ReactNode
+}
+
+const Button: FC<IChildren> = ({ children }) => {
+	return <button>{children}</button>
 }
 
 export default Button

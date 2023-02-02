@@ -1,0 +1,42 @@
+.css-13cymwt-control,
+.css-t3ipsp-control {
+	background-color: var(--background-revers) !important;
+	height: 68px;
+	border-radius: 0 !important;
+}
+.css-13cymwt-control:placeholder,
+.css-t3ipsp-control:placeholder {
+	color: var(--text-color);
+	text-align: center !important;
+}
+.css-t3ipsp-control:hover {
+	border-color: transparent !important;
+	box-shadow: none !important;
+}
+.css-10wo9uf-option,
+.css-tr4s17-option,
+.css-d7l1ni-option {
+	background-color: var(--background-color) !important;
+	height: 68px;
+	color: var(--text-color) !important;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid var(--text-color);
+	border-top: 0;
+}
+.css-d7l1ni-option {
+	font-weight: 700 !important;
+}
+.css-1nmdiq5-menu {
+	margin: 0 !important;
+}
+.css-1nmdiq5-menu {
+	border-radius: 0 !important;
+}
+input {
+	text-align: center !important;
+	&::placeholder {
+		text-align: center !important;
+	}
+}

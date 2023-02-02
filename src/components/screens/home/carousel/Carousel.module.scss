@@ -1,0 +1,10 @@
+.wrapper {
+	@apply flex flex-row-reverse;
+	.item {
+		@apply max-w-[500px];
+	}
+}
+
+.left {
+	@apply max-w-[100px] flex flex-col mb-2;
+}
