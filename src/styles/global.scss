@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+html {
+	@apply h-full;
+}
+html[data-theme='dark'] {
+	--text-color: #ffffff;
+	--background-color: #000;
+	--hover-color: #b3b3b3;
+	--search: #181818;
+	--background-revers: #fff;
+}
+
+html[data-theme='light'] {
+	--text-color: #000;
+	--background-color: #fff;
+	--hover-color: #b3b3b3;
+	--search: #e7e7e7;
+	--background-revers: #000;
+}
+.active {
+	&:hover {
+		color: var(--background-color);
+		background: var(--text-color);
+	}
+}
+
+body,
+#root {
+	background-color: var(--background-color);
+	@apply flex flex-col h-full;
+	color: var(--text-color);
+	margin: 0;
+
+	font-family: 'Jost', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+h1 {
+	@apply text-[32px] leading-[46px] tracking-[0.64em];
+}
+
+h2,
+p,
+a {
+	@apply text-[22px] leading-8;
+}
+li {
+	@apply border-x;
+	border-color: var(--text-color);
+}

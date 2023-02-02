@@ -1,0 +1,19 @@
+.footer {
+	flex: 0 0 auto;
+	@apply bg-transparent;
+	.wrapper {
+		ul {
+			@apply flex items-center;
+			li {
+				@apply px-[62px] h-[50px] flex items-end pb-[8px];
+				&:last-child {
+					flex: 1 0 auto;
+					@apply justify-center border-r-0;
+				}
+				&:first-child {
+					@apply border-l-0;
+				}
+			}
+		}
+	}
+}
