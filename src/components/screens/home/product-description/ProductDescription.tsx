@@ -11,7 +11,7 @@ const ProductDescription: FC = () => {
 		{ value: 'tree', label: 'Tree' },
 	]
 	return (
-		<div>
+		<div className={styles.wrapper}>
 			<Select
 				className={styles.select}
 				options={options}

@@ -28,3 +28,30 @@
 		@apply bottom-1/4 left-8 block h-fit top-auto;
 	}
 }
+@media (max-width: 1310px) {
+	.wrapper {
+		@apply w-[60%] gap-[50px];
+	}
+}
+
+@media (max-width: 992px) {
+	.wrapper {
+		@apply h-[65%];
+	}
+}
+@media (max-width: 992px) {
+	.wrapper {
+		@apply w-full;
+	}
+}
+@media (max-width: 400px) {
+	.wrapper {
+		@apply mb-7;
+		.sideImage {
+			@apply max-h-[280px] mb-5 max-w-[70px];
+		}
+		.showMore {
+			@apply bottom-0;
+		}
+	}
+}

@@ -46,3 +46,24 @@
 		transform: scale(0.95, 1.05);
 	}
 }
+
+@media (max-width: 772px) {
+	.wrapper {
+		.buttons {
+			@apply flex-row;
+			> .add {
+				@apply text-left pl-5;
+			}
+		}
+	}
+}
+@media (max-width: 555px) {
+	.wrapper {
+		.buttons {
+			@apply flex-col;
+			> .add {
+				@apply text-center pl-0;
+			}
+		}
+	}
+}

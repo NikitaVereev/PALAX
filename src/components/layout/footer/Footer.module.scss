@@ -17,3 +17,19 @@
 		}
 	}
 }
+@media (max-width: 1250px) {
+	.footer .wrapper ul li {
+		@apply px-7;
+	}
+}
+@media (max-width: 772px) {
+	.footer .wrapper ul {
+		@apply flex-wrap;
+		> li {
+			&:last-child {
+				@apply border-t;
+				border-color: var(--text-color);
+			}
+		}
+	}
+}

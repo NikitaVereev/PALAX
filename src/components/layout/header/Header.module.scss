@@ -38,7 +38,7 @@
 			}
 			.search {
 				@apply w-[357px] flex items-center justify-center;
-				> div {
+				> form {
 					@apply relative w-[90%] h-[29px];
 					input {
 						@apply absolute inset-0 px-3;
@@ -51,7 +51,7 @@
 							color: var(--text-color);
 						}
 					}
-					img {
+					> button {
 						@apply absolute left-1/4;
 						top: 50%;
 						transform: translateY(-50%);
@@ -80,5 +80,11 @@
 	}
 	100% {
 		opacity: 1;
+	}
+}
+
+@media (max-width: 1420px) {
+	.header {
+		display: none;
 	}
 }
