@@ -7,6 +7,7 @@ import themeDark from '../../assets/images/themeDark.svg'
 
 import Basket from './basket/Basket'
 import Search from '../../ui/search/Search'
+import Menu from './mobile-menu/Menu'
 
 const Header: FC = () => {
 	const { theme, setTheme } = useTheme()
@@ -61,6 +62,9 @@ const Header: FC = () => {
 
 					<li onClick={isImage ? handleLightThemeClick : handleDarkThemeClick}>
 						<img src={isImage ? themeDark : themeLight} alt='dark' />
+					</li>
+					<li className={styles.menu}>
+						<Menu />
 					</li>
 				</ul>
 			</nav>

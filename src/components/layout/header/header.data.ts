@@ -7,17 +7,17 @@ import favoritesDark from '../../assets/images/favoritesDark.svg'
 
 export const messenger = [
 	{
-		name: 'facebook',
+		name: 'Facebook',
 		image: facebook,
 		hover: facebookDark,
 	},
 	{
-		name: 'instagram',
+		name: 'Instagram',
 		image: instagram,
 		hover: instagramDark,
 	},
 	{
-		name: 'favorites',
+		name: 'Favorites',
 		image: favorites,
 		hover: favoritesDark,
 	},
