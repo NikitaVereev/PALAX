@@ -4,13 +4,12 @@ import React from 'react'
 import Select from 'react-select'
 import '../../../../styles/react-select.scss'
 
-const options = [
-	{ value: 'steel', label: 'Steel' },
-	{ value: 'plastic', label: 'Plastic' },
-	{ value: 'tree', label: 'Tree' },
-]
-
 const ProductDescription: FC = () => {
+	const options = [
+		{ value: 'steel', label: 'Steel' },
+		{ value: 'plastic', label: 'Plastic' },
+		{ value: 'tree', label: 'Tree' },
+	]
 	return (
 		<div>
 			<Select

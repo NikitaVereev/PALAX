@@ -6,12 +6,12 @@ import themeLight from '../../assets/images/theme.svg'
 import themeDark from '../../assets/images/themeDark.svg'
 import searchLight from '../../assets/images/searchLight.svg'
 import searchDark from '../../assets/images/searchDark.svg'
-import useOutsideAlerter from '../../hooks/useOutsideAlert'
-import cn from 'classnames'
+
+import Basket from './basket/Basket'
 
 const Header: FC = () => {
 	const { theme, setTheme } = useTheme()
-	const { ref, isShow, setIsShow } = useOutsideAlerter(false)
+
 	const [isImage, setIsImage] = useState(false)
 
 	const handleLightThemeClick = () => {
@@ -47,17 +47,7 @@ const Header: FC = () => {
 					</li>
 
 					<li className={styles.cart}>
-						<p onClick={() => setIsShow(!isShow)}>
-							Cart <span>2</span>
-						</p>
-						{isShow && (
-							<div
-								ref={ref}
-								className={cn(styles.basket, isShow ? 'open' : '')}
-							>
-								Привет мир, я корзина
-							</div>
-						)}
+						<Basket />
 					</li>
 				</ul>
 				<ul>
