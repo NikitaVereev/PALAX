@@ -2,8 +2,11 @@
 	@apply flex h-[100%]  w-1/2 gap-[140px] relative;
 	.item {
 		@apply max-w-[400px];
-		box-shadow: var(--box-shadow);
+		transition: 0.5s ease;
 		border: 1px solid var(--text-color);
+		&:hover {
+			box-shadow: var(--box-shadow);
+		}
 		> img {
 			@apply h-full inset-0 object-cover;
 		}
@@ -22,6 +25,6 @@
 		@apply absolute -top-10 left-10;
 	}
 	.showMore {
-		@apply bottom-0 left-8;
+		@apply bottom-1/4 left-8 block h-fit top-auto;
 	}
 }

@@ -11,18 +11,38 @@
 			@apply relative;
 			background: var(--text-color);
 			color: var(--background-color);
-
-			&:hover > span > img {
-				transform: scale(1.5);
+			&:hover {
+				text-shadow: 0 0 0.9px var(--background-color),
+					0 0 0.9px var(--background-color);
 			}
+
 			> span {
 				@apply absolute px-5 h-full right-0 top-0 flex items-center justify-center;
 				border: 1px solid var(--text-color);
 				background: var(--background-color);
+				&:hover > img {
+					animation: gelatine 0.5s ease infinite;
+				}
 				> img {
 					transition: 0.5s ease;
 				}
 			}
 		}
+	}
+}
+
+@keyframes gelatine {
+	from,
+	to {
+		transform: scale(1, 1);
+	}
+	25% {
+		transform: scale(0.9, 1.1);
+	}
+	50% {
+		transform: scale(1.1, 0.9);
+	}
+	75% {
+		transform: scale(0.95, 1.05);
 	}
 }

@@ -4,10 +4,9 @@ import { messenger } from './header.data'
 import styles from './Header.module.scss'
 import themeLight from '../../assets/images/theme.svg'
 import themeDark from '../../assets/images/themeDark.svg'
-import searchLight from '../../assets/images/searchLight.svg'
-import searchDark from '../../assets/images/searchDark.svg'
 
 import Basket from './basket/Basket'
+import Search from '../../ui/search/Search'
 
 const Header: FC = () => {
 	const { theme, setTheme } = useTheme()
@@ -28,10 +27,14 @@ const Header: FC = () => {
 			<nav className={styles.wrapper}>
 				<ul>
 					<li className='active'>
-						<a href=''>Shop</a>
+						<a href='' data-title='Shop'>
+							Shop
+						</a>
 					</li>
 					<li className='active'>
-						<a href=''>Discover</a>
+						<a href='' data-title='Discover'>
+							Discover
+						</a>
 					</li>
 				</ul>
 				<ul>
@@ -39,11 +42,10 @@ const Header: FC = () => {
 						<h1>COMPANY</h1>
 					</li>
 					<li className={styles.search}>
-						<div>
-							<input type='text' placeholder='Search' />
-
-							<img src={isImage ? searchDark : searchLight} alt='search' />
-						</div>
+						<Search
+							//@ts-ignore
+							isImage={isImage}
+						/>
 					</li>
 
 					<li className={styles.cart}>

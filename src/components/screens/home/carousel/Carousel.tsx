@@ -24,7 +24,7 @@ const Carousel = (props: any) => {
 									<img src={item} alt='product images' onClick={handleClick} />
 								</div>
 							))
-							.slice(0, 1)
+							.slice(0, 2)
 					: props.images.map((item: any, index: number) => (
 							<div className={styles.left_content} key={index}>
 								<img src={item} alt='product images' onClick={handleClick} />
