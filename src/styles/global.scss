@@ -13,6 +13,7 @@ html[data-theme='dark'] {
 	--hover-color: #b3b3b3;
 	--search: #181818;
 	--background-revers: #fff;
+	--box-shadow: 7px 13px 0px rgba(255, 255, 255, 0.75);
 }
 
 html[data-theme='light'] {
@@ -21,12 +22,13 @@ html[data-theme='light'] {
 	--hover-color: #b3b3b3;
 	--search: #e7e7e7;
 	--background-revers: #000;
+	--box-shadow: 7px 13px 0px rgba(0, 0, 0, 0.75);
 }
 
-.active {
+.active,
+button {
 	&:hover {
-		color: var(--background-color);
-		background: var(--text-color);
+		font-weight: 700;
 	}
 }
 
@@ -51,6 +53,6 @@ a {
 	@apply text-[22px] leading-8;
 }
 li {
-	@apply border-x;
+	@apply border-x relative;
 	border-color: var(--text-color);
 }

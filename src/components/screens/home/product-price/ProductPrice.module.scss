@@ -1,0 +1,28 @@
+.wrapper {
+	@apply gap-5 flex flex-col;
+	.buttons {
+		@apply flex flex-col gap-5;
+		.personalise {
+			background: var(--background-color);
+			color: var(--text-color);
+			border: 1px solid var(--text-color);
+		}
+		.add {
+			@apply relative;
+			background: var(--text-color);
+			color: var(--background-color);
+
+			&:hover > span > img {
+				transform: scale(1.5);
+			}
+			> span {
+				@apply absolute px-5 h-full right-0 top-0 flex items-center justify-center;
+				border: 1px solid var(--text-color);
+				background: var(--background-color);
+				> img {
+					transition: 0.5s ease;
+				}
+			}
+		}
+	}
+}

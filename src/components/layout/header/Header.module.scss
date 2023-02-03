@@ -60,6 +60,7 @@
 			}
 			.cart {
 				@apply pl-[60px] pr-[30px];
+				position: static;
 				p {
 					@apply flex items-center gap-1;
 					span {
@@ -68,7 +69,23 @@
 						background: var(--background-revers);
 					}
 				}
+				.basket {
+					@apply absolute w-1/4 z-10 right-0 top-0;
+					height: 100%;
+					animation: hide 0.5s ease;
+					background: rgba(98, 98, 98, 0.5);
+					backdrop-filter: blur(20px);
+				}
 			}
 		}
+	}
+}
+
+@keyframes hide {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }
