@@ -5,7 +5,7 @@ import showLess from '../../../assets/images/showLess.svg'
 
 const Carousel = (props: any) => {
 	const [isImage, setIsImage] = useState(
-		'	http://localhost:3000/static/media/item1.a7970a020aae2203abe5.png'
+		'/static/media/item1.be728c53d8d7e65732b8.png'
 	)
 	const [show, setShow] = useState(false)
 

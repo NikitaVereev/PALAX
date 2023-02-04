@@ -1,11 +1,14 @@
-.select {
-	input:placeholder {
-		color: #fff !important;
-	}
-	.css-qbdosj-Input {
-		color: #fff !important;
-		&:placeholder {
+.wrapper {
+	.select {
+		@apply mb-4;
+		input:placeholder {
 			color: #fff !important;
+		}
+		.css-qbdosj-Input {
+			color: #fff !important;
+			&:placeholder {
+				color: #fff !important;
+			}
 		}
 	}
 }

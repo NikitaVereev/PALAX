@@ -8,6 +8,7 @@ import themeDark from '../../assets/images/themeDark.svg'
 import Basket from './basket/Basket'
 import Search from '../../ui/search/Search'
 import Menu from './mobile-menu/Menu'
+import Autocomplete from '../../ui/search/Search'
 
 const Header: FC = () => {
 	const { theme, setTheme } = useTheme()
