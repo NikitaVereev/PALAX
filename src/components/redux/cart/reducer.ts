@@ -1,17 +1,26 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+interface IState {
+	id: number
+	name: string
+	price: number
+}
+interface IStateParams {
+	itemsInCart: IState[]
+}
+
 const cartSlice = createSlice({
 	name: 'cart',
 	initialState: {
 		itemsInCart: [],
-	},
+	} as IStateParams,
 	reducers: {
-		setItemInCart: (state: any, action: any) => {
+		setItemInCart: (state, action) => {
 			state.itemsInCart.push(action.payload)
 		},
-		deleteItemFromCart: (state: any, action: any) => {
+		deleteItemFromCart: (state, action) => {
 			state.itemsInCart = state.itemsInCart.filter(
-				(item: any) => item.id !== action.payload
+				item => item.id !== action.payload
 			)
 		},
 	},

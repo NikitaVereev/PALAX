@@ -3,7 +3,6 @@ import styles from './ProductDescription.module.scss'
 import { useState } from 'react'
 import Select, { components } from 'react-select'
 import '../../../../styles/react-select.scss'
-import Image from '../../../assets/images/showLess.svg'
 
 const ProductDescription: FC = () => {
 	const DropdownIndicator = (props: any) => {
