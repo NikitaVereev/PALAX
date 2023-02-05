@@ -1,5 +1,6 @@
 .wrapper {
 	@apply flex h-[100%]  w-1/2 gap-[140px] relative;
+	foo: bar;
 	.item {
 		@apply max-w-[400px];
 		transition: 0.5s ease;
@@ -9,12 +10,15 @@
 		}
 		> img {
 			@apply h-full inset-0 object-cover;
+			foo: bar;
 		}
 	}
 	.sideImage {
 		@apply max-w-[100px] h-[100%] overflow-hidden flex flex-col mb-2 overflow-y-auto relative;
+		foo: bar;
 		> div {
 			@apply mb-[52px] max-w-[111px];
+			foo: bar;
 		}
 		&::-webkit-scrollbar {
 			display: none;
@@ -23,35 +27,43 @@
 	.showLess,
 	.showMore {
 		@apply absolute -top-10 left-10;
+		foo: bar;
 	}
 	.showMore {
 		@apply bottom-1/4 left-8 block h-fit top-auto;
+		foo: bar;
 	}
 }
 @media (max-width: 1310px) {
 	.wrapper {
 		@apply w-[60%] gap-[50px];
+		foo: bar;
 	}
 }
 
 @media (max-width: 992px) {
 	.wrapper {
 		@apply h-[65%];
+		foo: bar;
 	}
 }
 @media (max-width: 992px) {
 	.wrapper {
 		@apply w-full;
+		foo: bar;
 	}
 }
 @media (max-width: 400px) {
 	.wrapper {
 		@apply mb-7;
+		foo: bar;
 		.sideImage {
 			@apply max-h-[280px] mb-5 max-w-[70px];
+			foo: bar;
 		}
 		.showMore {
 			@apply bottom-0;
+			foo: bar;
 		}
 	}
 }

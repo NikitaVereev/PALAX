@@ -1,12 +1,16 @@
 .header {
 	flex: 0 0 auto;
 	@apply h-[50px]  items-center flex w-full;
+	foo: bar;
 	.wrapper {
 		@apply flex justify-around  w-full items-center;
+		foo: bar;
 		ul {
 			@apply flex items-center justify-between h-[50px];
+			foo: bar;
 			li {
 				@apply h-[50px] flex items-center justify-center border-l-0;
+				foo: bar;
 				> a {
 					&:hover {
 						color: var(--hover-color);
@@ -15,12 +19,15 @@
 			}
 			.message {
 				@apply py-[14] h-full;
+				foo: bar;
 			}
 			&:last-child {
 				li {
 					@apply px-[14px];
+					foo: bar;
 					&:last-child {
 						@apply pr-[11px];
+						foo: bar;
 					}
 				}
 			}
@@ -28,6 +35,7 @@
 				li {
 					border-left: none;
 					@apply px-[43px];
+					foo: bar;
 				}
 			}
 			&:nth-child(2) {
@@ -35,15 +43,19 @@
 			}
 			.logo {
 				@apply px-[59px];
+				foo: bar;
 			}
 
 			.cart {
 				@apply pl-[60px] pr-[30px] cursor-pointer;
+				foo: bar;
 				position: static;
 				p {
 					@apply flex items-center gap-1;
+					foo: bar;
 					span {
 						@apply w-6 h-6 flex items-center justify-center rounded-full text-sm;
+						foo: bar;
 						color: var(--background-color);
 						background: var(--background-revers);
 					}
@@ -51,6 +63,7 @@
 			}
 			.menu {
 				@apply hidden;
+				foo: bar;
 			}
 		}
 	}
@@ -79,10 +92,12 @@
 					li {
 						border-left: none;
 						@apply px-[20px];
+						foo: bar;
 					}
 				}
 				.logo {
 					@apply px-[25px];
+					foo: bar;
 				}
 			}
 		}
@@ -102,13 +117,16 @@
 					li {
 						border-left: none;
 						@apply px-[20px];
+						foo: bar;
 					}
 				}
 				.cart {
 					@apply px-[20px];
+					foo: bar;
 				}
 				.search {
 					@apply w-[265px];
+					foo: bar;
 				}
 			}
 		}
@@ -121,11 +139,13 @@
 			ul {
 				.menu {
 					@apply block;
+					foo: bar;
 				}
 
 				&:nth-child(3) {
 					.message {
 						@apply hidden;
+						foo: bar;
 					}
 				}
 			}

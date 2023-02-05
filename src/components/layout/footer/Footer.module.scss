@@ -4,14 +4,18 @@
 	.wrapper {
 		ul {
 			@apply flex items-center;
+			foo: bar;
 			li {
-				@apply px-[62px] h-[50px] flex items-end pb-[8px];
+				@apply px-[62px] h-[50px] pb-[8px] flex items-end;
+				foo: bar;
 				&:last-child {
 					flex: 1 0 auto;
 					@apply justify-center border-r-0;
+					foo: bar;
 				}
 				&:first-child {
 					@apply border-l-0;
+					foo: bar;
 				}
 			}
 		}
@@ -20,11 +24,13 @@
 @media (max-width: 1250px) {
 	.footer .wrapper ul li {
 		@apply px-7;
+		foo: bar;
 	}
 }
 @media (max-width: 772px) {
 	.footer .wrapper ul {
 		@apply flex-wrap;
+		foo: bar;
 		> li {
 			&:last-child {
 				@apply border-t;

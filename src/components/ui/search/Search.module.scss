@@ -1,7 +1,9 @@
 .search {
 	@apply w-[357px] flex items-center justify-center;
+	foo: bar;
 	> form {
 		@apply relative w-[90%] h-[29px];
+		foo: bar;
 		input {
 			@apply absolute inset-0 px-3;
 			border-radius: 48px;
