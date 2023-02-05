@@ -25,8 +25,8 @@
 				li {
 					@apply px-[14px];
 					foo: bar;
-					&:last-child {
-						@apply pr-[11px];
+					&:nth-child(4) {
+						@apply pr-[11px] border-r-0;
 						foo: bar;
 					}
 				}
@@ -83,7 +83,6 @@
 	.wrapper,
 	ul {
 		flex-wrap: wrap;
-		position: relative;
 	}
 	.header {
 		.wrapper {
@@ -104,12 +103,6 @@
 	}
 }
 @media (max-width: 1200px) {
-	.header,
-	.wrapper,
-	ul {
-		flex-wrap: wrap;
-		position: relative;
-	}
 	.header {
 		.wrapper {
 			ul {

@@ -12,6 +12,12 @@
 		}
 	}
 }
+@media (max-width: 1200px) {
+	.wrapper {
+		@apply gap-5 justify-evenly;
+		foo: bar;
+	}
+}
 @media (max-width: 992px) {
 	.wrapper {
 		.flexCol {
