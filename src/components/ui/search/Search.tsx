@@ -4,9 +4,9 @@ import styles from './Search.module.scss'
 import cn from 'classnames'
 import { search } from '../../assets/icons'
 
-export default function App({ isImage }: never) {
+export default function App() {
 	const [value, setValue] = useState<string>('')
-	const [active, setActive] = useState<string>('')
+	const [active, setActive] = useState(false)
 	const [isData, setIsData] = useState<
 		//@ts-ignore
 		Array[]
@@ -47,19 +47,23 @@ export default function App({ isImage }: never) {
 		localStorage.setItem('isData', JSON.stringify(isData))
 	}, [isData])
 
+	const handleInput = () => {
+		setIsShow(!isShow)
+		setActive(!active)
+	}
 	return (
-		<div className={styles.search} ref={ref} onClick={() => setActive('')}>
+		<div className={styles.search} ref={ref}>
 			<div className={styles.searchInside}>
-				<div
-					onClick={() => setActive('active')}
-					className={cn({ [styles.active]: active === 'active' })}
-				>
+				<div onClick={() => setActive(!active)}>
 					<input
 						placeholder='Search...'
+						className={cn({
+							[styles.active]: isShow === true || active === true,
+						})}
 						value={value}
 						onChange={handleEvent}
 						ref={inputRef}
-						onClick={() => setIsShow(!isShow)}
+						onClick={handleInput}
 					/>
 					<button onClick={addTodo}>
 						<svg

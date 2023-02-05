@@ -20,11 +20,11 @@
 					color: var(--text-color);
 					font-size: calc(calc(1vw + 1vh) * 0.982);
 				}
-				&:focus {
+				&.active {
 					text-align-last: left;
 					padding-left: 10%;
 				}
-				&:focus + button {
+				&.active + button {
 					left: 1%;
 				}
 			}

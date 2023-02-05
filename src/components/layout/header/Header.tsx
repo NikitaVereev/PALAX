@@ -55,8 +55,9 @@ const Header: FC = () => {
 				<ul>
 					<Messages />
 
-					<li onClick={isImage ? handleLightThemeClick : handleDarkThemeClick}>
+					<li>
 						<svg
+							onClick={isImage ? handleLightThemeClick : handleDarkThemeClick}
 							width='25'
 							height='25'
 							viewBox='0 0 25 25'
