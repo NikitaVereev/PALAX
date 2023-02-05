@@ -1,6 +1,15 @@
 .wrapper {
 	.select {
+		&:hover svg {
+			transform: rotate(0);
+		}
+
 		@apply mb-4;
+		svg {
+			opacity: 1;
+			transform: rotate(180deg);
+			transition: 0.5s ease;
+		}
 		input:placeholder {
 			color: #fff !important;
 		}

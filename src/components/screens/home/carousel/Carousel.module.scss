@@ -1,8 +1,8 @@
 .wrapper {
-	@apply flex h-[100%]  w-1/2 gap-[140px] relative;
+	@apply flex h-[100%]  w-1/2 gap-[140px] relative items-start;
 	foo: bar;
 	.item {
-		@apply max-w-[400px];
+		@apply max-w-full  mt-12;
 		transition: 0.5s ease;
 		border: 1px solid var(--text-color);
 		&:hover {
@@ -14,7 +14,7 @@
 		}
 	}
 	.sideImage {
-		@apply max-w-[100px] h-[100%] overflow-hidden flex flex-col mb-2 overflow-y-auto relative;
+		@apply max-w-[100px] h-fit overflow-hidden flex flex-col mb-2 pt-12 overflow-y-auto relative;
 		foo: bar;
 		> div {
 			@apply mb-[52px] max-w-[111px];
@@ -26,11 +26,13 @@
 	}
 	.showLess,
 	.showMore {
-		@apply absolute -top-10 left-10;
+		@apply absolute top-0 left-1/2;
+		transform: translateX(-50%);
 		foo: bar;
 	}
+
 	.showMore {
-		@apply bottom-1/4 left-8 block h-fit top-auto;
+		@apply bottom-0 block h-fit top-auto;
 		foo: bar;
 	}
 }

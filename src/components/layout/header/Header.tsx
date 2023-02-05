@@ -1,14 +1,12 @@
 import { FC, useState } from 'react'
 import { useTheme } from '../../hooks/useTheme'
-import { messenger } from './header.data'
 import styles from './Header.module.scss'
-import themeLight from '../../assets/images/theme.svg'
-import themeDark from '../../assets/images/themeDark.svg'
 
 import Basket from './basket/Basket'
 import Search from '../../ui/search/Search'
 import Menu from './mobile-menu/Menu'
-import Autocomplete from '../../ui/search/Search'
+import { mode } from '../../assets/icons'
+import Messages from './Messages'
 
 const Header: FC = () => {
 	const { theme, setTheme } = useTheme()
@@ -55,14 +53,18 @@ const Header: FC = () => {
 					</li>
 				</ul>
 				<ul>
-					{messenger.map((item: any, idx: number) => (
-						<li key={idx} className={styles.message}>
-							<img src={isImage ? item.hover : item.image} alt='item.name' />
-						</li>
-					))}
+					<Messages />
 
 					<li onClick={isImage ? handleLightThemeClick : handleDarkThemeClick}>
-						<img src={isImage ? themeDark : themeLight} alt='dark' />
+						<svg
+							width='25'
+							height='25'
+							viewBox='0 0 25 25'
+							fill='none'
+							xmlns='http://www.w3.org/2000/svg'
+						>
+							<path d={mode} />{' '}
+						</svg>
 					</li>
 					<li className={styles.menu}>
 						<Menu />

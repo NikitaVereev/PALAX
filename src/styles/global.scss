@@ -24,7 +24,8 @@ html[data-theme='light'] {
 }
 
 .active,
-button {
+button,
+.menu {
 	transition: 0.5s ease;
 	font-weight: 400;
 	position: relative;
@@ -36,7 +37,7 @@ button {
 body,
 #root {
 	background-color: var(--background-color);
-	@apply flex flex-col h-full;
+	@apply flex flex-col h-full overflow-x-hidden;
 	color: var(--text-color);
 	margin: 0;
 
@@ -56,6 +57,9 @@ a {
 	font-size: calc(calc(1vw + 1vh) * 0.982);
 }
 li {
-	@apply border-x relative;
+	@apply border-x;
 	border-color: var(--text-color);
+}
+svg {
+	fill: var(--text-color);
 }

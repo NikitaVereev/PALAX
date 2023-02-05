@@ -1,5 +1,6 @@
 import { FC, useState } from 'react'
-import { messenger } from '../header.data'
+import Messages from '../Messages'
+
 import styles from './Menu.module.scss'
 
 const Menu: FC = () => {
@@ -8,13 +9,7 @@ const Menu: FC = () => {
 		<div>
 			<button onClick={() => setOpen(!open)}>x</button>
 			<ul className={styles.menu}>
-				{open &&
-					messenger.map((item: any, idx: number) => (
-						<li>
-							<img src={item.image} alt={item.name} />
-							<span>{item.name}</span>
-						</li>
-					))}
+				{open && <Messages />}
 				{open && (
 					<>
 						<li className='active'>
