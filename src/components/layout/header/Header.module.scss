@@ -36,29 +36,7 @@
 			.logo {
 				@apply px-[59px];
 			}
-			.search {
-				@apply w-[357px] flex items-center justify-center;
-				> form {
-					@apply relative w-[90%] h-[29px];
-					input {
-						@apply absolute inset-0 px-3;
-						border-radius: 48px;
-						border: 1px solid var(--text-color);
-						background: var(--search);
 
-						&::placeholder {
-							@apply text-center;
-							color: var(--text-color);
-							font-size: calc(calc(1vw + 1vh) * 0.982);
-						}
-					}
-					> button {
-						@apply absolute left-1/4;
-						top: 50%;
-						transform: translateY(-50%);
-					}
-				}
-			}
 			.cart {
 				@apply pl-[60px] pr-[30px] cursor-pointer;
 				position: static;
