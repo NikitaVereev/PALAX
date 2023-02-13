@@ -6,6 +6,7 @@
 
 html {
 	@apply h-full;
+	transition: all 0.5s ease;
 }
 html[data-theme='dark'] {
 	--text-color: #ffffff;
@@ -52,7 +53,8 @@ h1 {
 
 h2,
 p,
-a {
+a,
+button {
 	@apply leading-8;
 	font-size: calc(calc(1vw + 1vh) * 0.982);
 }
